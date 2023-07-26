@@ -39,6 +39,5 @@ jobs:
             git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
             git config --global user.email "github-actions@github.com"
             git add .github/workflows/
-            git add .github/WORKFLOW_TEMPLATE/
             git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
             git push
