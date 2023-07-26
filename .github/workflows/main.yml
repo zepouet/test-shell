@@ -38,7 +38,7 @@ jobs:
           run: |
             git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
             git config --global user.email "github-actions@github.com"
-            ls -la 
+            ls -la .github/workflows/
             git add .github/workflows/
             git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
             git push
