@@ -26,7 +26,7 @@ jobs:
           run: |
             repo_name=${{ github.event.repository.name }}
             echo "repo name=[$repo_name]"
-            if [[ "$repo_name" *"nonprod"* ]]; then 
+            if [[ "$repo_name" == *"nonprod"* ]]; then 
               rm  -f .github/workflows/_sharedservices_prod.yml   
             else
               rm  -f .github/workflows/_sharedservices_nonprod.yml   
