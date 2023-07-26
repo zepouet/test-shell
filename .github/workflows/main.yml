@@ -24,7 +24,7 @@ jobs:
         - name: "Remove resources on create"          
           shell: bash
           run: |
-            repo_name = ${{ github.event.repository.name }}
+            repo_name=${{ github.event.repository.name }}
             echo "repo name=[$repo_name]"
             if [[ "$repo_name" *"nonprod"* ]]; then 
               rm  -f .github/workflows/_sharedservices_prod.yml   
